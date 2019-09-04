@@ -19,6 +19,7 @@ def meals
   Meal.all.select do |meal|
     meal.customer == self 
   end
+end
   #iterating through every instance of Meal and returning only the ones whos meals custmer matches the current customers instance. if a customer "Rachel" wants to know about all her meals you just call on this class
  def waiters 
    meals.map do |meal| 
