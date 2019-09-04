@@ -22,9 +22,11 @@ end
   end
   
   def best_tipper 
-   best_tipped_meal = meals.min do |meal_a, meal_b|
+   best_tipped_meal = meals.max do |meal_a, meal_b|
      meal_a.tip <=> meal_b.tip 
    end
+   #finds the maximum tip from meals array created by the meals method when comparind the meals tips
    best_tipped_meal.customer
   end
+  #will give you the result of the individual customer if you do best_tipped_meal.customer.name would just give you the name. 
 end
