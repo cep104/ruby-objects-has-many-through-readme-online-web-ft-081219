@@ -15,4 +15,10 @@ class Customer
   Meal.new(waiter,self,total,tip)
 end
 #don't need to take in customer because you can just use self as the current customers instance.
+def meals 
+  Meal.all.select do |meal|
+    meal.customer == self 
+  end
+  #iterating through every instance of Meal and returning only the ones whos meals custmer matches the current customers instance. if a customer "Rachel" wants to know about all her meals you just call on this class
+end
 end
